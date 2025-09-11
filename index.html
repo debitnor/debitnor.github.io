@@ -1,63 +1,204 @@
 <!doctype html>
-<html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Debitnor AS">
-    <title></title>    
-
-    <!-- Bootstrap core CSS -->
-<link href="./bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-  </head>
-  <body class="d-flex h-100 text-center text-black bg-white">
-    
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0"></h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gjeldsforhandlinger.no – Råd og hjelp ved gjeld</title>
+  <meta name="description" content="Praktisk informasjon om gjeldsforhandlinger, økonomiråd og hvordan du kan få kontroll. Lenker til fagressurser og veiledning fra Debitnor." />
+  <link rel="canonical" href="https://gjeldsforhandlinger.no/" />
+  <meta property="og:title" content="Gjeldsforhandlinger.no – Råd og hjelp ved gjeld" />
+  <meta property="og:description" content="Praktisk informasjon om gjeldsforhandlinger, økonomiråd og hvordan du kan få kontroll. Lenker til fagressurser og veiledning fra Debitnor." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gjeldsforhandlinger.no/" />
+  <meta property="og:image" content="https://gjeldsforhandlinger.no/og-image.jpg" />
+  <meta name="robots" content="index, follow" />
+  <style>
+    :root {
+      --bg: #0f172a;        /* slate-900 */
+      --panel: #111827;     /* gray-900 */
+      --card: #0b1220;      /* deep */
+      --text: #e5e7eb;      /* gray-200 */
+      --muted: #9ca3af;     /* gray-400 */
+      --primary: #60a5fa;   /* blue-400 */
+      --accent: #34d399;    /* emerald-400 */
+      --link: #93c5fd;      /* blue-300 */
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial}
+    body{background:linear-gradient(180deg,#0b1020, #0f172a 40%, #0b1020);color:var(--text);}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1050px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:42px;height:42px;border-radius:10px;background:radial-gradient(circle at 30% 30%, #34d399, #2563eb);box-shadow:var(--shadow)}
+    .brand h1{font-size: clamp(18px, 2.2vw, 24px);margin:0;font-weight:700}
+    .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(52,211,153,.08);color:#a7f3d0;border:1px solid rgba(52,211,153,.25);padding:6px 10px;border-radius:999px;font-size:12px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:24px;align-items:stretch}
+    .hero .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    .hero h2{margin:0 0 10px;font-size: clamp(22px, 3.2vw, 34px)}
+    .hero p{color:var(--muted);line-height:1.6}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(99,102,241,.12);color:#e0e7ff;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,#2563eb,#34d399);color:white;border:none}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:28px}
+    .post{grid-column: span 8;background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .sidebar{grid-column: span 4}
+    .post header{position:relative;background:transparent;border:none}
+    .post .content{padding:24px}
+    .post h3{margin:0 0 10px;font-size: clamp(20px, 2.6vw, 28px)}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:16px}
+    .post .cover{height:220px;background:radial-gradient(1200px 300px at 20% 0%, rgba(37,99,235,.35), transparent), radial-gradient(900px 300px at 80% 0%, rgba(52,211,153,.25), transparent), linear-gradient(180deg,#0d152a, #0a1122)}
+    .post .excerpt{color:var(--text);opacity:.9;line-height:1.7}
+    .readmore{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-weight:600}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    .list-clean{list-style:none;margin:0;padding:0}
+    .list-clean li{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+    .list-clean li:last-child{border-bottom:none}
+    footer{margin-top:36px;border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:var(--muted)}
+    .badge{display:inline-block;padding:4px 8px;border:1px solid rgba(255,255,255,.07);border-radius:999px;font-size:12px;color:#cbd5e1}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .post{grid-column: span 1}
+      .sidebar{grid-column: span 1}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Gjeldsforhandlinger.no",
+    "url": "https://gjeldsforhandlinger.no/",
+    "description": "Blogg med råd om gjeldsforhandlinger og økonomi.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Gjeldsforhandlinger.no"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Gjeldsforhandlinger<span style="opacity:.6">.no</span></h1>
+      </div>
+      <nav>
+        <a href="#artikler">Artikler</a>
+        <span class="badge">Uavhengige råd</span>
       </nav>
     </div>
   </header>
 
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <span class="tag">Praktiske råd • Gjeld og privatøkonomi</span>
+        <h2>Få kontroll på gjelden – trinn for trinn</h2>
+        <p>
+          Mange opplever at økonomien er uoversiktlig og at NAV ikke alltid dekker alt. På denne siden finner du
+          korte, praktiske artikler om <strong>gjeldsforhandlinger</strong>, rettigheter og mulige løsninger – fra
+          dialog med kreditorer til formelle ordninger som gjeldsordning.
+        </p>
+        <div class="cta">
+          <a class="btn primary" rel="noopener" href="https://debitnor.no/" target="_blank">Besøk Debitnor – profesjonell hjelp</a>
+          <a class="btn" href="#artikler">Les siste innlegg</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Trenger du snakke med noen?</h2>
+        <p class="meta">Gratis og uforpliktende førstesamtale</p>
+        <ul class="list-clean">
+          <li>Gjennomgang av situasjonen og mulige veier videre</li>
+          <li>Hvordan forhandle med inkasso/kreditorer</li>
+          <li>Vurdering av refinansiering vs. gjeldsordning</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" rel="noopener" href="https://debitnor.no/kontakt/" target="_blank">Kontakt Debitnor</a>
+          <a class="btn" rel="noopener" href="https://debitnor.no/blog/" target="_blank">Flere fagartikler</a>
+        </div>
+      </div>
+    </section>
 
-  <main class="px-3">
-    <a href="https://debitnor.no"> <img src="./DebitNor_logo.png" class="img-fluid" alt="debitnor logo"></a>
-    <h1 class="mt-5">Sliter du med gjeldsproblemer?</h1>
-    <p class="lead">Vi kan hjelpe deg. Ring Debitnor AS på 4006 1111 eller fyll ut vurderingsskjema her for gratis vurdering på telefon</p>
-    <p class="lead">
-      <a href="https://debitnor.no/vurderingsskjema/" class="btn btn-lg btn-primary fw-bold border-black bg-blue">Fyll ut vurderingssjema</a></p>
+    <section id="artikler" class="grid" aria-label="Artikler">
+      <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="cover" aria-hidden="true"></div>
+        <div class="content">
+          <header>
+            <h3 itemprop="headline">Sliter du med gjeld? Disse rettighetene har du – også når NAV ikke strekker til</h3>
+            <p class="meta"><time itemprop="datePublished" datetime="2025-09-11">11. september 2025</time> · 6 min lesing</p>
+          </header>
+          <div class="excerpt" itemprop="description">
+            <p>
+              Når budsjettene er stramme og regningene hoper seg opp, kan det føles som om hjelpen er langt unna. 
+              Selv om NAV kan bidra med veiledning og stønad i enkelte tilfeller, er det flere <strong>rettigheter og praktiske grep</strong> du kan bruke uavhengig av NAV.
+            </p>
+            <ul>
+              <li><strong>Innsyn og oversikt:</strong> Be om kontoutdrag og oppdatert saldo hos alle kreditorer. Få alt skriftlig.</li>
+              <li><strong>Pusterom:</strong> Be om midlertidig betalingsutsettelse eller redusert terminbeløp – begrunn med realistisk budsjett.</li>
+              <li><strong>Renter og gebyr:</strong> Forhandle om rentenedsettelse og fjerning av gebyrer når betalingsevnen er dokumentert svekket.</li>
+              <li><strong>Nedbetalingsplan:</strong> Foreslå en avdragsplan du kan holde over tid. Små, stabile innbetalinger bygger tillit.</li>
+              <li><strong>Formelle ordninger:</strong> Vurder gjeldsordning via namsmannen hvis situasjonen er varig og uoversiktlig.</li>
+            </ul>
+            <p>
+              I det opprinnelige innlegget går Debitnor dypere inn i hvordan du strukturerer budsjett, prioriterer 
+              nødvendige utgifter først, og hvordan dialogen med kreditorer bør foregå.
+            </p>
+          </div>
+          <p>
+            Les hele artikkelen hos <a itemprop="url" rel="noopener" target="_blank" href="https://debitnor.no/blog/sliter-du-med-gjeld-du-har-rettighetene-ogsa-nar-nav-ikke-strekker-til/">Debitnor</a>.
+          </p>
+          <p>
+            Trenger du profesjonell bistand? Se <a rel="noopener" target="_blank" href="https://debitnor.no/">debitnor.no</a> for rådgivning og praktisk hjelp.
+          </p>
+        </div>
+      </article>
 
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Populære temaer</h3>
+          <ul class="list-clean">
+            <li><a href="#">Gjeldsforhandling steg for steg</a></li>
+            <li><a href="#">Budsjettmal for trang økonomi</a></li>
+            <li><a href="#">Slik snakker du med inkasso</a></li>
+            <li><a href="#">Hva er gjeldsordning?</a></li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:18px">
+          <h3>Ressurser</h3>
+          <ul class="list-clean">
+            <li><a rel="noopener" target="_blank" href="https://debitnor.no/">Debitnor – rådgivning</a></li>
+            <li><a rel="noopener" target="_blank" href="https://www.nav.no/">NAV – offentlige tjenester</a></li>
+            <li><a rel="noopener" target="_blank" href="https://www.namsfogden.no/">Namsfogden – gjeldsordning</a></li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:18px">
+          <h3>Om siden</h3>
+          <p>
+            Gjeldsforhandlinger.no er en uavhengig informasjonsside med lenker til fagressurser. Siden eies av samme miljø som 
+            <a rel="noopener" target="_blank" href="https://debitnor.no/">Debitnor</a>, som tilbyr profesjonell gjeldsrådgivning.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+          <p>© <span id="year"></span> Gjeldsforhandlinger.no · Informasjon – ikke juridisk rådgivning. </p>
+          <p>Primær fagressurs: <a rel="noopener" target="_blank" href="https://debitnor.no/">debitnor.no</a></p>
+        </div>
+      </div>
+    </footer>
   </main>
-
-  <footer class="mt-auto text-black">
-    <p>Copyright © 2022 <a href="https://debitnor.no" class="text-decoration-none">Debitnor AS</a> - Org nr. 992938862 MVA - All Rights Reserved</p>
-  </footer>
-</div>
-
-
-    
-  </body>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
+
